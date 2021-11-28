@@ -46,9 +46,7 @@ public class MainRSAConfidencialidad {
 			do {
 				menu();
 				int opcion;
-				opcion = sc.nextInt();
-				sc.nextLine(); // Solo me funciona el sc.nextLine() de dentro del 
-				// case 1 si le meto esto aqui
+				opcion = Integer.parseInt(sc.nextLine()); 
 				
 				
 				switch (opcion) {
@@ -98,8 +96,7 @@ public class MainRSAConfidencialidad {
 					System.out.println("Introduce el modelo:");
 					c1.setModelo(sc.nextLine());
 					System.out.println("Introduce el precio:");
-					c1.setPrecio(sc.nextDouble());
-					
+					c1.setPrecio(Double.parseDouble(sc.nextLine()));
 					
 					// Encriptamos el objeto 
 					SealedObject so = new SealedObject(c1, cifrador);
